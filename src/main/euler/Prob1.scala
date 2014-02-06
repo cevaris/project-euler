@@ -1,5 +1,7 @@
 package main.euler
 
+import org.scalatest.FlatSpec
+
 /**
  * Created by cevaris on 2/5/14.
  *
@@ -9,7 +11,7 @@ package main.euler
  * Find the sum of all the multiples of 3 or 5 below 1000.
  *
  */
-class Prob1 extends Problems {
+class Prob1 extends FlatSpec with Problems {
 
 
   def execute() {
@@ -20,17 +22,19 @@ class Prob1 extends Problems {
 //    }
 //    println( sum )
 
-    val sum = ((0 to 999).filter(_ % 5 == 0) ++ ((0 to 999).toList.filter(_ % 3 == 0))).distinct.foldLeft(0)(_ + _)
+//    val sum = ((0 to 999).filter(_ % 5 == 0) ++ ((0 to 999).filter(_ % 3 == 0))).distinct.foldLeft(0)(_ + _)
+
+////  http://grokcode.com/75/learning-scala-with-project-euler/
+//  val sum = (1 until 1000).filter(n => n % 3 == 0 || n % 5 == 0).foldLeft(0)(_ + _)
+
     printf("%d".format(sum))
+
   }
 
 
-
-
-
-
-
-
+  it should "execute" in {
+    new Prob1().execute()
+  }
 
 
 }

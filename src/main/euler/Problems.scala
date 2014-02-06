@@ -3,7 +3,7 @@ package main.euler
 /**
  * Created by cevaris on 2/5/14.
  */
-class Problems {
+trait Problems {
 
   def printList(args: List[_]): Unit = {
     args.foreach(println)
