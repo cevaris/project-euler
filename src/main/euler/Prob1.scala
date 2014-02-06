@@ -22,7 +22,7 @@ class Prob1 extends FlatSpec with Problems {
 //    }
 //    println( sum )
 
-//    val sum = ((0 to 999).filter(_ % 5 == 0) ++ ((0 to 999).filter(_ % 3 == 0))).distinct.foldLeft(0)(_ + _)
+    val sum = ((0 to 999).filter(_ % 5 == 0) ++ ((0 to 999).filter(_ % 3 == 0))).distinct.foldLeft(0)(_ + _)
 
 ////  http://grokcode.com/75/learning-scala-with-project-euler/
 //  val sum = (1 until 1000).filter(n => n % 3 == 0 || n % 5 == 0).foldLeft(0)(_ + _)
