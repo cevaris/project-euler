@@ -36,10 +36,29 @@ class Prob2 extends FlatSpec with Problems {
 //      }
 //    }
 //    printf(s"Sum: $sum")
-//    printList(evenFibs)
 
 
-    do {     |   x = x + 1     | } while (x < 10)
+
+//    var fibs = List[Integer](1,0)
+//    var curr = 0
+//    do { curr = fibs(0)+fibs(1) } while ( {fibs ::= curr; curr }  < 4000000 )
+//    val sum = fibs.filter(_ % 2 == 0).foldLeft(0)(_ + _)
+//    printf(s"Sum: $sum")
+
+
+      var prev = 0 : Long
+      var curr = 1 : Long
+      var next = 1 : Long
+      var sum = 0  : Long
+
+      do {
+        next = prev + curr
+        prev = curr; curr = next
+        if(next % 2 == 0) sum += next
+      } while(curr < 4000000)
+
+      printf(s"Sum: $sum")
+
 
   }
 
